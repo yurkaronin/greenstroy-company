@@ -1,0 +1,101 @@
+/* Базовые стили */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+button,
+input {
+  font-family: inherit;
+}
+/* основные стили для сайта */
+body {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+
+    @media (max-width: 320px) {
+    font-size: 14px;
+  }
+}
+/* Доступно скрыть */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+/* Заголовки */
+.title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 120%;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 35px;
+  font-family: 'Montserrat', sans-serif;
+  display: block;
+
+  @media (max-width: 1220px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 27px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 21px;
+  }
+}
+
+/* обёртки */
+.wrapper {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 45px;
+
+  @media (max-width: 1220px) {
+    padding: 0 45px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 35px;
+  }
+
+  @media (max-width: 320px) {
+    padding: 0 20px;
+  }
+}
