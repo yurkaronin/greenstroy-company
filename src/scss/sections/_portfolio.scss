@@ -6,6 +6,10 @@
     margin-bottom: 30px;
     text-align: left;
     margin-bottom: 68px;
+
+    @media (max-width: 900px) {
+      text-align: center;
+    }
   }
 
   &__list {
@@ -15,6 +19,11 @@
     display: grid;
     grid-template-columns: auto auto auto;
     column-gap: 20px;
+
+    @media (max-width: 1130px) {
+      grid-template-columns: auto;
+      gap: 50px;
+    }
   }
 
   &__item {
@@ -25,9 +34,38 @@
     justify-content: space-between;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
+    @media (max-width: 400px) {
+      padding: 0;
+    }
+
     &:first-child .portfolio__labels {
       justify-content: space-around;
-      // left: 0;
+
+      @media (max-width: 1130px) {
+        justify-content: flex-start;
+      }
+
+      @media (max-width: 400px) {
+        padding: 0;
+        justify-content: space-between;
+        flex-direction: column;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: min-content;
+      }
+    }
+    @media (max-width: 1130px) {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      max-width: 350px;
     }
   }
 
@@ -36,11 +74,19 @@
     max-height: 197px;
     object-fit: cover;
     display: block;
+
+    @media (max-width: 1130px) {
+      max-width: 350px;
+    }
   }
 
   &__description {
     padding: 35px;
     padding-bottom: 47px;
+
+    @media (max-width: 1130px) {
+      flex-grow: 2;
+    }
   }
 
   &__name {
@@ -51,6 +97,10 @@
   &__adress {
     margin: 0;
     margin-bottom: 45px;
+
+    @media (max-width: 400px) {
+      margin-bottom: 30px;
+    }
   }
 
   &__links {
@@ -61,28 +111,28 @@
     flex-wrap: wrap;
     align-items: center;
 
-    @media (max-width: 1100px) {
-      justify-content: center;
+    @media (max-width: 1130px) {
+      justify-content: flex-start;
+    }
+
+    @media (max-width: 400px) {
     }
   }
 
   & .button {
-    letter-spacing: 1px;
-    color: #ffffff;
-    font-weight: 700;
     font-size: 14px;
-    line-height: 120%;
-    text-decoration: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    text-align: center;
-    display: inline-block;
-    font-family: inherit;
-    transition-duration: 0.5s;
-    background-color: #467637;
     padding: 13px 10px 10px;
-    border: 4px solid #467637;
     margin: 0;
+
+    @media (max-width: 1130px) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: 400px) {
+      margin-right: 0;
+      margin-bottom: 10px;
+      width: 100%;
+    }
   }
 
   &__status {
@@ -97,10 +147,31 @@
     right: 0;
     flex-wrap: wrap;
 
-    @media (max-width: 1100px) {
-      display: none;
+    &--work {
+      background-color: #284a2e;
     }
 
+    @media (max-width: 1130px) {
+      max-width: fit-content;
+      position: initial;
+    }
+
+    @media (max-width: 900px) {
+      display: flex;
+      align-items: center;
+      max-width: 150px;
+      padding: 9.5px 15px 13px;
+      position: absolute;
+      right: 0;
+    }
+
+    @media (max-width: 400px) {
+      position: initial;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
   }
 
   &__status-icon {
@@ -108,24 +179,43 @@
     margin-right: 10px;
     margin-bottom: 10px;
     fill: #ffffff;
+
+    @media (max-width: 1130px) {
+      margin-bottom: 0;
+    }
   }
 
   &__status-label {
     font-size: 14px;
     line-height: 120%;
     flex-grow: 2;
+
+    @media (max-width: 400px) {
+      flex-grow: 1;
+      max-width: min-content;
+    }
   }
 
   &__labels {
     position: absolute;
     top: -40px;
-    // left: 12px;
     width: 100%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     padding: 0 15px;
     max-width: 100%;
+
+    @media (max-width: 400px) {
+      justify-content: space-between;
+      padding: 0;
+      justify-content: space-between;
+      flex-direction: column;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: min-content;
+    }
   }
 
   &__label-item {
@@ -144,6 +234,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 1130px) {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 400px) {
+      margin-right: 0;
+      font-size: 10px;
+      height: auto;
+      border-radius: 0;
+      width: 120px;
+      padding: 10px;
+      margin-bottom: 5px;
+    }
 
     & b {
       font-weight: 700;
