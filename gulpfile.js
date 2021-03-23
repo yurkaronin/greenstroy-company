@@ -26,10 +26,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 /* минификация js и исключение неиспользуемого кода */
 const uglify = require('gulp-uglify');
-/* svg-спрайты */
-const svgSprite = require('gulp-svg-sprite');
-/* оптимизация svg-файлов */
-const svgo = require('gulp-svgo');
 /* оптимизация картинок */
 const imagemin = require('gulp-imagemin');
 /* сжатие html */
@@ -140,46 +136,6 @@ task('scripts-final', () => {
     .pipe(dest('./final/js/'))
 });
 
-/* задание на: работа с svg-спрайтом  */
-task('svg-sprite', () => {
-  return src('./src/svg/**/*.svg')
-    .pipe(svgo({
-      plugins: [
-        {
-          removeAttrs: { attrs: '(fill|stroke|style|width|height|data.*)' }
-        }
-      ]
-    }))
-    .pipe(svgSprite({
-      mode: {
-        symbol: {
-          sprite: '../sprite.svg'
-        }
-      }
-    }))
-    .pipe(dest('./build/svg/'))
-    .pipe(browserSync.reload({ stream: true }));
-});
-
-task('svg-sprite-final', () => {
-  return src('./src/svg/**/*.svg')
-    .pipe(svgo({
-      plugins: [
-        {
-          removeAttrs: { attrs: '(fill|stroke|style|width|height|data.*)' }
-        }
-      ]
-    }))
-    .pipe(svgSprite({
-      mode: {
-        symbol: {
-          sprite: '../sprite.svg'
-        }
-      }
-    }))
-    .pipe(dest('./final/svg/'))
-});
-
 
 /* задание на: работа со сторонними библиотеками */
 task('libs', () => {
@@ -222,7 +178,6 @@ task('watch', () => {
   watch('./src/html/**/*.html', series('html'));
   watch('./src/scss/**/*.scss', series('styles'));
   watch('./src/js/**/*.js', series('scripts'));
-  watch('./src/svg/icons/*.svg', series('svg-sprite'));
   watch('./src/libs/**/*', series('libs'));
   watch('./src/img/**/*', series('images'));
   watch('./src/fonts/**/*', series('fonts'));
@@ -249,13 +204,13 @@ task('server-final', () => {
 
 /* основной таск (дефолтный): последовательное выполнение */
 task('default',
-  series('clean', 'svg-sprite',
+  series('clean',
     parallel('html', 'images', 'fonts', 'styles', 'scripts', 'libs'),
     parallel('server', 'watch')
   ));
 
 task('fatality',
-  series('clean-final', 'svg-sprite-final',
+  series('clean-final',
     parallel('html-final', 'images-final', 'fonts--final', 'styles-final', 'scripts-final', 'libs-final'),
     parallel('server-final')
   ));
