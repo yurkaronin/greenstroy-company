@@ -63,8 +63,8 @@
 
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: auto auto auto;
+    gap: 44px 30px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -198,7 +198,7 @@
     }
   }
 
-  &__text {
+  &__description {
     max-width: 550px;
     margin: 0;
     margin-left: 50px;
