@@ -20,6 +20,10 @@
     padding-top: 55px;
   }
 
+  @media (max-width: 465px) {
+    padding-top: 35px;
+        }
+
   &__text {
     font-weight: 700;
     font-size: 18px;
@@ -53,6 +57,10 @@
         background-size: cover;
         top: -15px;
         left: -30px;
+
+        @media (max-width: 465px) {
+          display: none;
+        }
       }
     }
 
@@ -79,6 +87,11 @@
       margin-bottom: 20px;
       padding-right: 60px;
       margin-right: 0;
+    }
+
+    @media (max-width: 465px) {
+      padding-right: 0;
+      margin-left: 0;
     }
   }
 
@@ -131,6 +144,10 @@
       width: 100px;
       height: 100px;
     }
+
+    @media (max-width: 450px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__name {
@@ -145,16 +162,18 @@
     max-width: 255px;
     position: absolute;
     bottom: -27px;
-    left: -95px;
+    right: -95px;
 
     @media (max-width: 1200px) {
-      position: inherit;
+      position: relative;
+      top: auto;
+      left: 0;
+      bottom: -130px;
     }
 
     @media (max-width: 970px) {
       position: relative;
-      bottom: 0;
-      left: 50%;
+      bottom: -50px;
     }
 
     @media (max-width: 800px) {
@@ -166,6 +185,12 @@
 
     @media (max-width: 670px) {
       padding-top: 0;
+    }
+
+    @media (max-width: 470px) {
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
     }
   }
 }
