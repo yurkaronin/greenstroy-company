@@ -44,12 +44,21 @@
       top: 12px;
 
       @media (max-width: 970px) {
-        display: none;
+        content: "";
+        background-image: url("../img/icons/quote.svg");
+        width: 25px;
+        height: 25px;
+        background-color: transparent;
+        background-position: center;
+        background-size: cover;
+        top: -15px;
+        left: -30px;
       }
     }
 
     @media (max-width: 1200px) {
       margin-right: 40px;
+      margin-left: 25px;
     }
 
     @media (max-width: 970px) {
