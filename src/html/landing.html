@@ -88,7 +88,8 @@
           <div class="about__description">
             <h2 class="title">О жилом комплексе Южная&#160;Звезда</h2>
             <div class="about__text">
-              <p class="about__accent-text">ГРИНСТРОЙ – строительная компания, на протяжении 8 лет занимающаяся строительством
+              <p class="about__accent-text">ГРИНСТРОЙ – строительная компания, на протяжении 8 лет занимающаяся
+                строительством
                 жилья
                 и коммерческих помещений на территории Тахтамукайского района Республики Адыгея. В том числе, нами
                 построены и успешно реализованы 2 проекта жилой недвижимости: жилой комплекс «Европа» в центре поселка
@@ -117,8 +118,7 @@
             <div class="video-button">
               <p>Смотреть видео-ролик про ЖК Южная Звезда</p>
               <button class="button button--play" type="button">
-                <img src="img/icons/play.svg" alt="конка кнопки видео" width="55"
-                  height="55">
+                <img src="img/icons/play.svg" alt="конка кнопки видео" width="55" height="55">
               </button>
             </div>
           </div>
@@ -140,8 +140,227 @@
       </div>
     </section>
 
+    <section class="house-map">
+      <h2 class="visually-hidden">Карта жилого комплекса Южная Звезда</h2>
+      <img class="map__polygon" src="img/map/house-map.jpg" alt="Карта Жилого комплекса">
+
+      <div class="progress">
+        <div class="progress__wrapper">
+          <div class="progress__bar">
+            <span class="bar">
+              <span class="progress__item"></span>
+            </span>
+          </div>
+          <form action="">
+            <ul class="progress__house-list list">
+              <li class="house-1">
+                <input name="house-check-1" type="checkbox" checked="checked" disabled="disabled">
+                <label for="house-check-1">
+                  <span>Литер 1</span>2019 г.</label>
+              </li>
+              <li class="house-2">
+                <input name="house-check-2" type="checkbox" checked="checked" disabled="disabled">
+                <label for="house-check-2">
+                  <span>Литер 2</span>2020 г.</label>
+              </li>
+              <li class="house-3">
+                <input name="house-check-3" type="checkbox" checked="checked" disabled="disabled">
+                <label for="house-check-3">
+                  <span>Литер 3</span>2020 г.</label>
+              </li>
+              <li class="house-4">
+                <input name="house-check-4" type="checkbox" disabled="disabled"> <label for="house-check-4"><span>Литер
+                    4</span>2021 г.</label></li>
+              <li class="house-5"><input name="house-check-5" type="checkbox" disabled="disabled"> <label
+                  for="house-check-5"><span>Литер 5</span>2021 г.</label></li>
+              <li class="house-6"><input name="house-check-6" type="checkbox" disabled="disabled"> <label
+                  for="house-check-6"><span>Литер 6</span>2022 г.</label></li>
+              <li class="house-7"><input name="house-check-7" type="checkbox" disabled="disabled"> <label
+                  for="house-check-7"><span>Литер 7</span>2022 г.</label></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="infrastructure">
+      <div class="wrapper">
+        <h2 class="visually-hidden">Информация об инфраструктуре района</h2><span class="title">Развитая инфраструктура
+          от школы до больницы в шаговой доступности</span>
+      </div>
+      <div id="map" class="map">
+
+        <div class="infrastructure__wrap">
+          <ul class="infrastructure__list">
+            <li>
+              <button class="map__filter-button  map-mark__label" data-filter="all" style="display: none;">Показать
+                всё</button>
+              <button class="map__filter-button map__filter-main map-mark__label" style="display: none;">Main</button>
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-first">
+                <img src="img/map/1.svg" alt="Иконка" width="36" height="36">
+                <img src="img/map/2.svg" alt="Иконка" width="36" height="36"><span>ТЦ
+                  «МЕГА
+                  Адыгея-Кубань», гипермаркеты «Ашан», METRO, супермаркет «Магнит»,</span>
+              </button>
+
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-2">
+                <img src="img/map/magnit.svg" alt="Иконка" width="36" height="36"><span>Ближайшие магазины торговой сети
+                  Магнит и Магнит
+                  Косметик,</span>
+              </button>
+
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-3">
+                <img src="img/map/3.svg" alt="Иконка" width="36" height="36">
+                <img src="img/map/4.svg" alt="Иконка" width="36" height="36">
+                <span>IKEA, Столплит Хоум, Леруа Мерлен, ТЦ «Монорама»</span>
+              </button>
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-4">
+                <img src="img/map/five.svg" alt="Иконка" width="36" height="36">
+                <span>Ближайшие магазины торговой сети "Пятёрочка"</span>
+              </button>
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-5">
+                <img src="img/map/7.svg" alt="Иконка" width="36" height="36">
+                <img src="img/map/6.svg" alt="Иконка" width="36" height="36">
+                <span>Школы № 27,15,5 .садики №5,10,14,27, «Дюймовочка», «Матрешка», «Непоседы», «Вишенка»,
+                  художественная школа,
+                  колледж МГТУ, филиал ФГБОУ ВО «МГТУ»</span>
+              </button>
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-6">
+                <img src="img/map/apteka.svg" alt="Иконка" width="36" height="36">
+                <img src="img/map/11.svg" alt="Иконка" width="36" height="36">
+                <span>МБУЗ
+                  «Яблоновская поликлиника», Медицинская лаборатория CL, Аптеки, медицинские центры, стоматологические
+                  клиники</span>
+              </button>
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-7">
+                <img src="img/map/9.svg" alt="Иконка" width="36" height="36">
+                <img src="img/map/10.svg" alt="Иконка" width="36" height="36">
+                <span>Филиал
+                  ГБУ РА «МФЦ» №2, Почтовое отделение</span>
+              </button>
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-8">
+                <img src="img/map/5.svg" alt="Иконка" width="36" height="36">
+                <img src="img/map/8.svg" alt="Иконка" width="36" height="36">
+                <span>Гипермаркет спортивных товаров «Декатлон», фитнес-клубы «Мастер спорта», Fitness
+                  LiFe,
+                  теннисный корт, школа каратэ</span>
+              </button>
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-9">
+                <img src="img/map/13.svg" alt="Иконка" width="36" height="36">
+                <img src="img/map/14.svg" alt="Иконка" width="36" height="36">
+                <span>Ветеринарная клиника и стационар Айболит,
+                  Ветклиника «Центральная», зоомагазин Zoostory, круглосуточная ветеринарная клиника и стационар</span>
+              </button>
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-10">
+                <img src="img/map/15.svg" alt="Иконка" width="36" height="36">
+                <img src="img/map/16.svg" alt="Иконка" width="36" height="36">
+                <span>СТО, автомойки, автошколы, автосалоны «Юг-Авто», официальные дилеры «Юг-Авто Land Rover», «Юг-Авто
+                  Hyundai»,
+                  «Юг-Авто Honda»</span>
+              </button>
+            </li>
+            <li>
+              <button class="map__filter-button" data-filter="group-11">
+                <img class="only" src="img/map/17.svg" alt="Иконка" width="36" height="36">
+                <span>Continental coffee – кофейня- кондитерская</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="infrastructure-benefits">
+          <ul class="infrastructure-benefits__list list">
+            <li class="infrastructure-benefits__item">
+              <img class="infrastructure-benefits__icon" src="img/icons/infrastructure-1.svg" alt="Иконка" width="36"
+                height="36">
+              <div class="infrastructure-benefits__wrapper">
+                <span>1 мин.</span>
+                <p><b>пешком</b> до остановки</p>
+              </div>
+            </li>
+            <li class="infrastructure-benefits__item">
+              <img class="infrastructure-benefits__icon" src="img/icons/infrastructure-2.svg" alt="Иконка" width="36"
+                height="36">
+              <div class="infrastructure-benefits__wrapper">
+                <span>15 мин.</span>
+                <p><b>на машине</b> до центра Краснодара</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="infrastructure-benefits__list list infrastructure-benefits__list--border">
+            <li class="infrastructure-benefits__item">
+              <img class="infrastructure-benefits__icon" src="img/icons/infrastructure-3.svg" alt="Иконка" width="36"
+                height="36">
+              <div class="infrastructure-benefits__wrapper">
+                <span>Маршрутки:</span>
+                <p>7Б, 7а, 58,129,177,183</p>
+              </div>
+            </li>
+            <li class="infrastructure-benefits__item">
+              <img class="infrastructure-benefits__icon" src="img/icons/infrastructure-4.svg" alt="Иконка" width="36"
+                height="36">
+              <div class="infrastructure-benefits__wrapper">
+                <span>Автобусы:</span>
+                <p>55,55а, 104а, 107а, 130</p>
+              </div>
+            </li>
+          </ul>
+          <ul class="infrastructure-benefits__list list infrastructure-benefits__list--big">
+            <li class="infrastructure-benefits__item">
+              <img class="infrastructure-benefits__icon" src="img/icons/infrastructure-5.svg" alt="Иконка" width="36"
+                height="36">
+              <div class="infrastructure-benefits__wrapper">
+                <p>Жители нашего ЖК имеют возможность устроить своих детей в одно из лучших учебных заведений Республики
+                  Адыгея – Образовательный центр на 1100 детей, включающий в себя среднеобразовательную школу и детский
+                  сад.</p>
+              </div>
+            </li>
+            <li class="infrastructure-benefits__item">
+              <img class="infrastructure-benefits__icon" src="img/icons/infrastructure-6.svg" alt="Иконка" width="36"
+                height="36">
+              <div class="infrastructure-benefits__wrapper">
+                <p>На 1-ом этаже первого литера уже открылся супермаркет ПЯТЁРОЧКА. В шаговой доступности от ЖК уже
+                  функционируют супермаркет «Магнит» и магазин «Магнит Косметик», кафе, аптека, автомойка,
+                  многочисленные специализированные магазины.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="infrastructure-benefits__footer">
+            <p><sup>*</sup> Дорога до центра Краснодара занимает всего пятнадцать минут. Можно добраться через
+              Яблоновский либо через Тургеневский мост.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1dba075a-a65a-4b22-84a2-ebb26f26fe43&lang=ru_RU"
+    type="text/javascript">
+  </script>
+  <script src="js/map.js"></script>
 </body>
 
 </html>

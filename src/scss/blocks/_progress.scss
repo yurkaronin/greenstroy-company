@@ -1,0 +1,145 @@
+@-webkit-keyframes loader {
+  0% {
+    width: 0;
+  }
+
+  20% {
+    width: 10%;
+  }
+
+  25% {
+    width: 24%;
+  }
+
+  to {
+    width: 42%;
+  }
+}
+
+@keyframes loader {
+  0% {
+    width: 0;
+  }
+
+  20% {
+    width: 10%;
+  }
+
+  25% {
+    width: 24%;
+  }
+
+  to {
+    width: 42%;
+  }
+}
+
+.progress {
+  max-width: 1100px;
+  width: 100%;
+  padding: 38px 35px;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%23f7f7f7' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  color: #000;
+  position: relative;
+  bottom: 125px;
+  margin: 0 auto;
+  z-index: 10;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.1));
+  border-radius: 32px 0;
+  margin-bottom: -125px;
+
+  @media (max-width: 1110px) {
+    bottom: auto;
+    padding: 25px;
+    margin-bottom: 0;
+  }
+
+  &__house-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (max-width: 580px) {
+      flex-direction: column;
+      max-height: 250px;
+    }
+  }
+
+  &__bar {
+    background-color: gray;
+    color: #fff;
+    height: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__house-list {
+    & li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & input {
+      margin-bottom: 10px;
+    }
+
+    & label {
+      font-size: 20px;
+      line-height: 130%;
+      color: #000;
+      text-align: center;
+      position: relative;
+
+      @media (max-width: 1100px) {
+        font-size: 14px;
+        line-height: 120%;
+      }
+
+      & span {
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #467637;
+        display: block;
+        margin-bottom: 10px;
+
+        @media (max-width: 1100px) {
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  &__bar {
+    border-radius: 60px;
+    overflow: hidden;
+    width: 100%;
+
+    & span {
+      display: block;
+    }
+
+    & .bar {
+      background: #d5c695;
+    }
+  }
+
+  &__item {
+    animation: loader 8s ease forwards;
+    background: #345c32;
+    color: #fff;
+    padding: 5px;
+    width: 0;
+  }
+}

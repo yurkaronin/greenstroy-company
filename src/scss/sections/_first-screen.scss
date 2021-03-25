@@ -410,8 +410,10 @@
   }
 
   .first-screen__buttons-wrapper {
-    gap: 30px;
-    grid-template-columns: 1fr 1fr;
+    @media (max-width: 1100px) {
+      gap: 30px;
+      grid-template-columns: 1fr 1fr;
+    }
 
     @media (max-width: 670px) {
       grid-template-columns: 1fr;

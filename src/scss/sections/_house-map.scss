@@ -1,0 +1,12 @@
+.house-map {
+    position: relative;
+/*     min-height: 763px; */
+    /* overflow: revert; */
+    overflow: hidden;
+}
+
+.map__polygon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

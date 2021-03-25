@@ -123,7 +123,7 @@ task('styles-final', () => {
 task('scripts', () => {
   return src(['./src/js/*.js'])
     .pipe(sourcemaps.init())
-    .pipe(concat('main.js', { newLine: ';' }))
+    /* .pipe(concat('main.js', { newLine: ';' })) */
     .pipe(sourcemaps.write())
     .pipe(dest('./build/js/'))
     .pipe(browserSync.reload({ stream: true }));
