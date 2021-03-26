@@ -1,0 +1,191 @@
+.payment {
+  position: relative;
+  background-repeat: no-repeat;
+  background-color: #f7f7ec;
+  background-image: url("../img/bg/happy-people-test.jpg");
+  background-size: contain;
+  background-position: top left;
+  overflow: hidden;
+
+  @media (max-width: 1310px) {
+    background-color: #f7f7ec;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%23efefe5' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-position: initial;
+    background-size: initial;
+  }
+
+  & .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+
+  &__wrapper {
+    background-color: #f7f7ec;
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%23efefe5' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+    max-width: 705px;
+    padding: 65px 0 65px 95px;
+    position: relative;
+
+    @media (max-width: 1310px) {
+      background-image: none;
+      background-color: transparent;
+      width: 100%;
+      max-width: initial;
+      padding: 65px 0;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: -99%;
+      z-index: 0;
+      background-color: #f7f7ec;
+      background-image: url("data:image/svg+xml,%3Csvg width='32' height='64' viewBox='0 0 32 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 28h20V16h-4v8H4V4h28v28h-4V8H8v12h4v-8h12v20H0v-4zm12 8h20v4H16v24H0v-4h12V36zm16 12h-4v12h8v4H20V44h12v12h-4v-8zM0 36h8v20H0v-4h4V40H0v-4z' fill='%23efefe5' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+
+      @media (max-width: 1310px) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 42px;
+    margin: 0 0 30px;
+
+    @media (max-width: 930px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 650px) {
+      font-size: 24px;
+      line-height: 120%;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 122%;
+    color: #284a2e;
+    margin: 0 0 55px;
+
+    @media (max-width: 930px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 5px;
+
+    @media (max-width: 360px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    display: block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 1300px) {
+      display: grid;
+      gap: 60px;
+      grid-template-columns: auto auto auto;
+    }
+
+    @media (max-width: 930px) {
+      grid-template-columns: auto auto;
+      gap: 70px 50px;
+    }
+
+    @media (max-width: 400px) {
+      grid-template-columns: auto;
+    }
+  }
+
+  &__list-item {
+    max-width: 165px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+
+    @media (max-width: 1300px) {
+      max-width: 100%;
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    &:last-child {
+      max-width: 100%;
+      margin-bottom: 0;
+      margin-right: 0;
+
+      @media (max-width: 930px) {
+        grid-column: span 2;
+      }
+
+      @media (max-width: 400px) {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &__description-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media (max-width: 1300px) {
+      display: grid;
+      gap: 60px;
+      grid-template-columns: auto auto auto;
+    }
+
+    @media (max-width: 400px) {
+      grid-template-columns: auto;
+      gap: 40px;
+    }
+
+    & ul {
+      max-width: 50%;
+
+      @media (max-width: 1300px) {
+        max-width: 100%;
+      }
+
+      /* @media (max-width: 1040px) {
+        max-width: 50%;
+        margin-left: 20px;
+      } */
+
+      /* @media (max-width: 360px) {
+        max-width: 100%;
+      } */
+    }
+  }
+}
